@@ -1,0 +1,294 @@
+
+/* ==========================================================
+   RetailSync QB - Premium Theme
+   ========================================================== */
+
+:root{
+  --bg:#18181b;
+  --bg-soft:#232326;
+  --card:rgba(42,42,46,.75);
+  --gold:#d4af37;
+  --gold-light:#f3d26a;
+  --text:#ffffff;
+  --muted:#c9c9c9;
+  --border:rgba(255,255,255,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+a{text-decoration:none}
+
+/* ---------- NAVBAR ---------- */
+
+.custom-navbar{
+    background:rgba(18,18,20,.88);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(212,175,55,.20);
+    transition:.35s;
+}
+
+.logo-text{font-size:1.45rem;font-weight:700;color:#fff}
+.gold{color:var(--gold)}
+
+.navbar-nav .nav-link{
+    color:#fff!important;
+    margin-left:22px;
+    position:relative;
+    transition:.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active{
+    color:var(--gold)!important;
+}
+
+.navbar-nav .nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.3s;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after{
+    width:100%;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at top right, rgba(212,175,55,.15), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255,255,255,.05), transparent 25%),
+        linear-gradient(135deg,#1a1a1d,#222228 55%,#161618);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:80px 80px;
+    mask-image:linear-gradient(to bottom,black,transparent);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    right:-180px;
+    top:-220px;
+    border-radius:50%;
+    background:radial-gradient(circle,var(--gold),transparent 70%);
+    opacity:.08;
+    filter:blur(30px);
+}
+
+.hero .container{position:relative;z-index:2}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.25rem;
+    color:var(--muted);
+    max-width:620px;
+}
+
+.hero-buttons{margin-top:40px}
+
+.hero-buttons .btn{
+    padding:14px 34px;
+    border-radius:50px;
+    font-weight:600;
+    margin-right:15px;
+}
+
+.btn-warning{
+    background:var(--gold);
+    border-color:var(--gold);
+}
+
+.btn-warning:hover{
+    background:var(--gold-light);
+    border-color:var(--gold-light);
+}
+
+/* ---------- SECTIONS ---------- */
+
+section{
+    padding:100px 0;
+}
+
+.features{
+    background:var(--bg-soft);
+}
+
+.feature-card{
+    background:var(--card);
+    backdrop-filter:blur(16px);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:35px;
+    transition:.35s;
+    box-shadow:0 12px 40px rgba(0,0,0,.30);
+    height:100%;
+}
+
+.feature-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(212,175,55,.45);
+}
+
+.feature-card i{
+    color:var(--gold);
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.workflow-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:50px;
+}
+
+.step{
+    width:190px;
+    padding:30px;
+    text-align:center;
+    background:var(--card);
+    border-radius:18px;
+    border:1px solid var(--border);
+}
+
+.step i{
+    font-size:2.4rem;
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.arrow{
+    color:var(--gold);
+    font-size:1.8rem;
+}
+
+.cta{
+    background:linear-gradient(135deg,#262626,#1b1b1d);
+    text-align:center;
+}
+
+footer{
+    padding:45px 0;
+    background:#101012;
+    border-top:1px solid rgba(212,175,55,.18);
+}
+
+footer p{
+    color:#bcbcbc;
+}
+
+/* ---------- FORM ---------- */
+
+.form-control{
+    background:#26262a;
+    color:#fff;
+    border:1px solid #3a3a3d;
+}
+
+.form-control:focus{
+    background:#26262a;
+    color:#fff;
+    border-color:var(--gold);
+    box-shadow:none;
+}
+
+/* ---------- ANIMATION ---------- */
+
+.hidden{
+    opacity:0;
+    transform:translateY(30px);
+    transition:.8s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:992px){
+
+.hero{
+    text-align:center;
+    min-height:80vh;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.workflow-box{
+    flex-direction:column;
+}
+
+.arrow{
+    transform:rotate(90deg);
+}
+
+.navbar-nav{
+    text-align:center;
+    margin-top:15px;
+}
+
+.navbar-nav .nav-link{
+    margin:10px 0;
+}
+
+}
+
+@media(max-width:576px){
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.hero p{
+    font-size:1.05rem;
+}
+
+.hero-buttons .btn{
+    display:block;
+    width:100%;
+    margin:10px 0;
+}
+
+.feature-card{
+    padding:25px;
+}
+
+}
