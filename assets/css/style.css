@@ -291,4 +291,46 @@ footer p{
     padding:25px;
 }
 
+   /* ===========================
+   Small Hero Pages
+=========================== */
+
+.hero-small{
+
+    min-height:420px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.hero-small .container{
+
+    text-align:center;
+
+}
+
+.hero-small h1{
+
+    margin-bottom:20px;
+
+}
+
+.hero-subtitle{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    text-align:center;
+
+    font-size:1.2rem;
+
+    color:var(--muted);
+
+}
+
 }
